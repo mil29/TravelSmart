@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+
+
+    {% for cat in category_detail %}
+    {% if forloop.first %}
+    <h4 class="category-title-text">{{ cat.category.upper }}</h4>
+    {% endif %}
+    {% endfor %}
+
+
+{% for item in category_detail %}
+
+
+            <div class="recent-detail-container">
+                <div class="recent-search-detail">
+                    <h5 class="item-title">Name</h5>{{ item.name }}
+                    <h5 class="item-title">Address</h5>{{ item.address }}
+                    <h5 class="item-title">Website</h5><a href="{{ item.website }}">{{ item.website }}</a>
+                    <h5 class="item-title">Location</h5>{{ item.location }}
+                </div>
+
+                <br><br>
+            <a class="item-delete-button delete-btn" href="{% url 'travel:place-detail-delete' place_id=item.id %}">Delete</a>
+            </div>
+
+           
+
+
+{% endfor %}
+
+
+
+
+<br><br>
+
+<div class="back-button-div">
+    <a class="back-button" href="{% url 'profile' slug=request.user.slug pk=request.user.id %}">Back</a>
+</div>
+
+
+{% endblock content %}

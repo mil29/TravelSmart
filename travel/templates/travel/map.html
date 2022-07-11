@@ -1,0 +1,62 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+
+<body class="travel-category-body">
+
+{% if nothing %}
+
+<div class="no-map-info">
+  <h3 class="no-map-info-text">{{nothing}}</h3>
+</div>
+
+{% else %}
+
+
+<div class="page-title">
+    <h2>{{ location_title }} Map</h2>
+</div>
+
+<div class="back-button-div destination-back">
+<a class="back-button" href="{% url 'travel:travel-destination' %}">Back</a>
+</div>
+
+<!-- Place mode Google map -->
+<iframe
+  width="100%"
+  height="550"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key={{ google_key }}&q={{ location }}"
+  allowfullscreen>
+</iframe>
+
+
+<br><br>
+
+<div class="page-title">
+    <h2>Landmarks</h2>
+</div>
+<!--Search Places Google Map -->
+<iframe
+  width="100%"
+  height="650"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/search?key={{ google_key }}&q={{ query }}+in+{{ location }}"
+  allowfullscreen>
+</iframe>
+
+
+
+{{ form_context }}
+
+
+
+
+{% endif %}
+
+</body>
+
+
+
+{% endblock content %}

@@ -1,0 +1,537 @@
+/*  NAVBAR ///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.navbar {
+    background: rgb(2,0,36);
+    background: linear-gradient(196deg, rgba(2,0,36,1) 0%, rgba(9,84,121,1) 16%, rgba(0,212,255,1) 100%);
+}
+.nav-item a {
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(255, 255, 255) !important;
+    margin-top: 20px;
+}
+@media (max-width: 991px) {
+    .nav-item a {
+        border-top-style: solid;
+        border-top-width: 0.5px; 
+        margin-bottom: 5px;
+    }
+    nav a:hover {
+        color: rgb(55, 60, 61) !important;
+    }
+    .navbar-nav {
+        width: 100% !important;
+    }
+}
+.logo-img {
+    width: 80px;
+    height: 50px;
+}
+/* adjusts width of nav-item text on navbar */
+.navbar-nav {
+    width: 60%;
+    text-align: center; 
+}
+.navbar-toggler {
+    border-color: rgba(101, 101, 101, 0.795) !important;
+}
+
+
+/* Flash messsages /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+#msg, #msg-info, .alert {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+
+
+
+/*  Footer ////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.footer {
+    position: absolute;
+    padding-top: 60px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: azure;
+}
+
+  
+
+/* Login and register form cards  ////////////////////////////////////////////////////////////////////////////////////////*/
+.card-body {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 5px 15px 15px 10px;
+}
+
+
+
+/* Register Form  ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.register-body {
+    background: url('../img/blur-waters-imgB&W.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form-title {
+    font-weight: 300;
+}
+
+.signup-content {
+font-family: 'Nunito Sans', sans-serif;
+font-weight: 400;
+background: #fff;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-o-border-radius: 10px;
+-ms-border-radius: 10px;
+padding: 50px 85px; }
+
+.form-group {
+    margin-bottom: 20px;
+}
+@media (min-width: 991px) {
+    .form-group {
+        width: 80%;
+        margin: auto;
+    }
+}
+.form-group input {
+    margin-bottom: 20px;
+}
+
+
+.form-submit {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  border: none;
+  background-image: -moz-linear-gradient(to left, #8df3ca, #1d9eb8);
+  background-image: -ms-linear-gradient(to left, #8df3ca, #1d9eb8);
+  background-image: -o-linear-gradient(to left, #8df3ca, #1d9eb8);
+  background-image: -webkit-linear-gradient(to left, #8df3ca, #1d9eb8);
+  background-image: linear-gradient(to left, #8df3ca, #1d9eb8); }
+
+
+.loginhere {
+  color: #555;
+  text-align: center;
+  margin-top: 91px;
+  margin-bottom: 5px; }
+
+.loginhere-link {
+  color: #222; }
+
+.asteriskField {
+    display: none;
+}
+#error_1_id_username {
+    display: none;
+}
+#error_1_id_email {
+    display: none;
+}
+#error_1_id_password2 {
+    display: none;
+}
+
+
+
+
+  /* Login Form ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.login-body {
+    background: url('../img/resort-imgB&W.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+/* Profile Page ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+.trash_pic_button {
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 5px;
+    color: #767373;
+}
+
+
+
+
+
+
+
+/* Edit Profile form ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+.profile-edit-body {
+    background-color: rgb(32, 36, 74);
+}
+
+.edit-profile-card {
+    background-color: rgb(249, 249, 249);
+}
+
+/* age select dropdown menu */
+.form-select {
+    width: 50% !important;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+
+#div_id_profile_pic {
+    width: 20%;
+}
+.image_url {
+    font-size: 15px;
+    color: #be2d1d;
+    margin-bottom: 20px;
+}
+.cancel-button {
+    width: 15%;
+    margin-right: 100%;
+    margin-top: 20px;
+}
+.clear-image-div {
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+
+
+/* Weather svg icons //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.weather-icons {
+    width: 100%;
+    background-color: #205e87ad;
+    padding: 0;
+    position: absolute;
+}
+
+
+/* Weather widget //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.weather_widget {
+    background-image: linear-gradient(#020024,#031132,#087baa);
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 550px;
+    border: 7px solid rgb(117, 117, 117);
+    border-radius: 20px;
+}
+@media (max-width: 991px) {
+    .weather_widget {
+        width: 90%;
+    }
+}
+
+.location {
+    text-align: center;
+}
+.location_text {
+    color: #fff;
+    font-size: 30px;
+}
+
+.main_weather {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.todays_day {
+    color: #fff;
+    font-size: 50px;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    top: 60px;
+    position: relative;
+}
+
+.today_left {
+    text-align: center;
+    width: 120px;
+    top: 30px;
+    position: relative;
+    padding-right: 0;
+    margin-right: 0;
+    height: 200px;
+    display: inline-block;
+}
+
+.todays_weather_text {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 130px;
+    top: 70%;
+    width: fit-content;
+    position: relative;
+}
+
+.todays_right {
+    width: fit-content;
+}
+.todays_weather_temp_min {
+    color: rgb(33, 160, 180);
+    font-size: 40px;
+    margin-right: 10px;
+}
+.todays_weather_temp_max {
+    color: rgb(157, 71, 71);
+    font-size: 40px;
+}
+.today_temps {
+    text-align: center;
+    margin-top: 20px;
+}
+.temp_text_max {
+    color: rgb(199, 114, 114);
+}
+.temp_text_min {
+    color: rgb(74, 192, 211);
+}
+
+
+.daily_weather_main {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.daily_weather {
+    color: #fff;
+    width: 70px;
+    height: 90px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-top: 80px;
+}
+.daily_day {
+    bottom: 10px;
+    position: relative;
+}
+
+.day_temp {
+    position: relative;
+    top: 120px;
+}
+
+.day_descrip {
+    font-size: 10px;
+    top: 100px;
+    width: 100px;
+    left: -15px;
+    color: rgb(151, 208, 238);
+    height: fit-content;
+    position: absolute;
+}
+
+
+/* Currency widget //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.currency-container {
+    background-image: linear-gradient(#020024,#031132,#087baa);
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.currency-form-container {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.both-currency {
+    height: 55px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.currency1 {
+    position: relative;
+    width: fit-content;
+    display: inline;
+    margin-right: 10px;
+}
+.currency2 {
+    position: relative;
+    width: fit-content;
+    display: inline;
+    margin-left: 10px;
+}
+.left_sym_container {
+    width: 40%;
+    display: inline-flex;
+    position: relative;
+    padding-top: 40px;
+    justify-content: center;
+}
+.currency-flags-labels1 {
+    width: 40%;
+    height: 100px;
+    position: absolute; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#countryFlag {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#curr1 {
+    color: #e8e8e8;
+    width: fit-content;
+    height: 50px;
+    font-size: 35px;
+    font-family: sans-serif;
+    position: relative;
+}
+.right_sym_container {
+    width: 40%;
+    display: inline-flex;
+    position: relative;
+    padding-top: 40px;
+    justify-content: center;
+}
+.currency-flags-labels2 {
+    width: 40%;
+    height: 100px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#countryFlag2 {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#curr2 {
+    color: #e8e8e8;
+    width: fit-content;
+    height: 50px;
+    font-size: 35px;
+    font-family: sans-serif;
+    position: relative;
+}
+.bottom-convert-currency {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    justify-content: center;
+}
+.currency-amount {
+    color: #e8e8e8;;
+    height: 100px;
+    width: 100%;
+    margin-top: 70px;
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+}
+.currency-amount-input {
+    width: 30%;
+    font-size: 50px;
+    color: #535353;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.first_currency {
+    margin-left: 0;
+    vertical-align: auto;
+    position: absolute;
+}
+#currency-sym {
+    color: #e8e8e8;
+    position: relative;
+    width: fit-content;
+    font-size: 30px;
+    padding-right: 20px;
+}
+.convert-submit-div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 60px;
+}
+#currency-submit {
+    position: relative;
+    bottom: 0;
+    width: 80%;
+}
+#convert-result {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+#convert-result {
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+.lower-bottom {
+    font-family: sans-serif;
+    color: #e8e8e8;
+    width: 100%;
+    background-color: #65656568;
+}
+
+/* currency convert loading icon  */
+.pre-loading-icon {
+    height: 100px;
+    background: url('../img/loading_icon/load.gif') no-repeat center center;;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+
+/* gets rid of arrows on input type number box in currency amount  */
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+

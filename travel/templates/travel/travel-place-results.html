@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+ 
+<div class="page-title results-title empty-results">
+    <h2>{{category}}</h2>
+</div>
+
+<div class="no-info-div search-another">
+    <a class="search-another-category" href="{% url 'travel:get-category' %}">search another category</a>
+</div>
+
+<body class="travel-category-body">
+
+{% for k, v in place_data.items %}
+
+    <div class="card">
+        <div class="card-body place-card">
+
+            <h4 class="place-name">{{ v.name }}</h4> <br>
+            <h6 class="place-address">{{ v.address }}</h6> <br>
+            <a href="{{ v.url }}">{{ v.url }}</a> <br>
+            {% for img in v.images|slice:"0:4" %}
+            <img class="place-imgs" src="{{img.prefix}}300x300{{img.suffix}}" alt="place-images">
+            {% endfor %}
+            {% if v.rating %}
+            <h6 class="place-rating">Rating: {{ v.rating }}</h6> <br>
+            {% endif %}
+            {% if v.description %}
+            <h6 class="description-title">Description</h6>
+            <h6 class="place-description">{{ v.description }}</h6>
+            {% endif %}
+
+
+            <form places-save-form-url="{% url 'travel:save-place-result' %}" method="POST" id="places-save-form">
+                {% csrf_token %}
+                <button class="places-save" id="place-save-btn" value="{{v.name}}--{{v.address}}--{{v.url}}--{{v.fsq_id}}--{{v.category}}--{{v.location}}">Save</button>
+            </form>
+        
+        </div>
+    </div>
+
+
+    
+{% empty %}
+
+    <div class="gif-div">
+        <iframe src="https://giphy.com/embed/LOEI8jsNKPmzdJYvhJ" width="480" height="270" frameBorder="0" class="gif-green-no" allowFullScreen></iframe>
+    </div>
+
+    <div class="no-info-div">
+        <h3 class="no-info-text">Sorry no information available on "{{category}}" at this location</h3>
+    </div>
+
+    
+{% endfor %}
+
+
+</body>
+
+{% endblock content %}

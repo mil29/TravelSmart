@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+
+<body class="login-body">
+    
+    <div class="container">
+
+        <div class="card-body">
+
+        <section class="signup">
+    
+                <div class="signup-content">
+                    <form method="POST" id="login-form" class="signup-form">
+                        {% csrf_token %}
+                        <h2 class="auth-form-title">Login</h2>
+                        <div class="form-group">
+                            {{ form|crispy }}
+                        </div>
+                    
+                       
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Login"/>
+                        </div>
+
+
+                    <!-- Login Form errors displayed-->
+                    {% if form.errors %}
+                    {% for field in form %}
+                    {% for error in field.errors%}
+                    <div class="alert alert-danger" id="form-msg">
+                        <strong>Incorrect username or password</strong>
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger" id="form-msg">
+                        <strong>Incorrect username or password</strong>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+
+                    </form>
+                    <p class="loginhere">
+                        Not registered ? <a href="{% url 'register' %}" class="loginhere-link">Create account</a>
+                    </p>
+                </div>
+            
+        </section>
+  
+        </div>
+          
+    </div>
+
+</body>
+
+
+
+
+{% endblock content %}

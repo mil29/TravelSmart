@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+
+<body class="travel-category-body">
+
+<br>
+
+<div class="back-button-div destination-back">
+<a class="back-button" href="{% url 'travel:travel-destination' %}">Back</a>
+</div>
+
+
+<h2 class="category-title">Select your Interest</h2>
+
+<br><br>
+
+
+<div class="category-form-container">
+
+
+    <form data-category-url="{% url 'travel:get-category' %}" name="category_options" method="POST" class="category-form-container" id="category-form">
+    {% csrf_token %}
+
+
+        <h5 class="popular-title">Popular Categories</h5>
+        <div class="popular-categories-div">
+            {% for category in  popular_categories %}
+            <button class="category_btn popular_category_btns" value="{{ category }}" id="main_category">{{ category}}</button>
+            {% endfor %}
+        </div>
+    
+            <h5 class="popular-title">All Categories</h5>
+    
+        <div class="main_cat_div result_div" id="main_cat_div">
+            {% for category in main_categories %}
+            <button class="category_btn 0" value="{{category}}" id="main_category">{{ category }}</button>
+            {% endfor %}
+        </div>  
+    
+        <br><br>
+    
+        <div class="sub1_cat_div result_div" id="category_result1"></div> <br><br>
+        <div class="sub2_cat_div result_div" id="category_result2"></div> <br><br>
+        <div class="sub3_cat_div result_div" id="category_result3"></div> <br><br>
+        <div class="sub4_cat_div result_div" id="category_result4"></div> <br><br>
+    
+        
+        <br>
+        <div class="submit-category-div" id="submit_category">
+        </div>
+    
+    </form>
+    
+    
+    
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+        
+
+    
+{% endblock content %}  
+    
+
+
+

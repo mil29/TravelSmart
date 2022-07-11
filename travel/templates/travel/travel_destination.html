@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block content %}
+
+<body class="travel-category-body">
+
+<div class="home-container">
+    
+    <h2 class="page-title">Plan your Holiday</h2>
+
+
+<div class="current-destination-div">
+    <h6 class="current-destination-title">Current selected destination: {{last_search}}</h6>
+</div>
+
+
+
+
+    <a class="card-link" href="{% url 'travel:travel-map' %}">
+        <div class="home-card travel_map_card">
+            <h2 class="home-card-link-title">Map</h2>
+        </div>
+    </a>
+
+    <a class="card-link" href="{% url 'travel:travel-weather' %}">
+    <div class="home-card travel_weather_card">
+            <h2 class="home-card-link-title">Weather</h2>
+    </div>
+    </a>
+
+    <a class="card-link" href="{% url 'travel:travel-currency' %}">
+    <div class="home-card travel_currency_card">
+            <h2 class="home-card-link-title">Currency</h2>
+    </div>
+    </a>
+
+    <a class="card-link" href="{% url 'travel:get-category' %}">
+    <div class="home-card travel_places_card">
+            <h2 class="home-card-link-title">Places</h2>
+    </div>
+    </a>
+
+
+
+
+
+
+</div>
+
+
+
+</body>
+
+
+
+
+
+
+
+{% endblock content %}

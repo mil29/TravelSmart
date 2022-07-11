@@ -1,0 +1,93 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+
+<body class="travel-category-body">
+
+<div class="page-title">
+    <h2>Currency Converter</h2>
+</div>
+
+<div class="back-button-div destination-back">
+<a class="back-button" href="{% url 'travel:travel-destination' %}">Back</a>
+</div>
+
+<div class="currency-container">
+
+
+
+    <form data-currency-form-url="{% url 'travel:travel-currency' %}" method="POST" class="currency-form-container" id="currency-form">
+    {% csrf_token %}
+
+
+
+            <div class="left_sym_container">
+                <div class="currency-flags-labels1">
+                    <div id="countryFlag"></div>
+                    <span id="curr1"></span>
+                </div>                
+            </div>
+                
+            <div class="right_sym_container">
+                <div class="currency-flags-labels2">
+                    <div id="countryFlag2"></div>
+                    <span id="curr2"></span>
+                </div>
+            </div>
+    
+       
+       
+    
+            <div class="both-currency">
+                    <div class="currency1">
+                        <select class="currency-selector" name="state1" style="width: 40%">
+                            <option value="" disabled selected>Currency 1</option>
+                            {% for symbol, currency in monetary_symbols.items %}
+                        <option value="{{symbol}}-{{currency.1}}">{{symbol}} - {{currency.0}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+            
+            
+                    <div class="currency2">
+                        <select class="currency-selector2" name="state2" style="width: 40%">
+                            <option value="" disabled selected>Currency 2</option>
+                            {% for symbol, currency in monetary_symbols.items %}
+                        <option value="{{symbol}}-{{currency.1}}">{{symbol}} - {{currency.0}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+            </div>
+
+
+
+            <div class="bottom-convert-currency">
+                <div class="currency-amount">
+                    <h2 class="currency-amount-title">Amount</h2>
+                    <span id="currency-sym"></span>
+                    <input autofocus name="amount" id="currency-amount-input" class="currency-amount-input" placeholder="0.00" type="number" step="0.01">
+                </div>
+            </div>
+
+ 
+       
+       
+            <div class="convert-submit-div">
+                <input type="submit" name="submit" id="currency-submit" class="form-submit" value="Convert"/>
+            </div>
+
+
+
+            <div id="convert-result"></div>
+    
+    
+    </form> 
+
+
+        
+
+</div>
+
+
+</body>
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% if form.errors %}
+{% for field in form %}
+{% for error in field.errors %}
+{% if error == 'Custom user with this Username already exists.' or error == 'Custom user with this Email already exists.' %}
+<div class="alert alert-danger" id="form-msg">
+    <strong>{{ error|escape|slice:"21:" }}</strong>
+</div>
+{% else %}
+<div class="alert alert-danger" id="form-msg">
+    <strong>{{ error|escape }}</strong>
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% for error in form.non_field_errors %}
+<div class="alert alert-danger" id="form-msg">
+    <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endif %}

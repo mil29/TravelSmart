@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+
+<h2>Logged Out !</h2>
+
+
+<button>
+<a href="{% url 'login' %}">Login</a>
+</button>
+
+<button>
+<a href="{% url 'register' %}">Register</a>
+</button>
+
+{% endblock content %}

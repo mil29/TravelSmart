@@ -1,0 +1,96 @@
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+
+<body class="travel-category-body">
+
+<div class="page-title">
+    <h2>Weather</h2>
+</div>
+
+<div class="back-button-div destination-back">
+<a class="back-button" href="{% url 'travel:travel-destination' %}">Back</a>
+</div>
+
+<div class="weather_widget">
+    <div class="weather_body">
+        <div class="location">
+            <span class="location_text">{{ location }}</span>
+        </div>
+
+        <div class="main_weather">
+
+            {% for key, value in today_forecast.items %}
+     
+            <div class="todays_day">
+                <span class="todays_day_text">{{ value.day|slice:"0:3" }}</span>
+            </div>
+
+
+           
+                <div class="today_left">
+                    <div class="weather-icons">
+                    <i class="todays_weather_icon">{% include value.svg %}</i>
+                    </div>
+                    <span class="todays_weather_text">{{ value.description }}</span>
+                </div>
+    
+                <div class="today_temps">
+                    <span class="temp_text_max">Max</span>
+                    <span class="temp_text_min">Min</span>
+
+                    <div class="todays_right">
+                        <span class="todays_weather_temp_max">{{ value.temp_max|floatformat:"0" }}°c </span>
+                    </div>
+                    <div class="todays_right">
+                        <span class="todays_weather_temp_min">{{ value.temp_min|floatformat:"0" }}°c</span>
+                    </div>
+
+                </div>
+      
+                {% endfor %}
+        </div>
+
+        <div class="daily_weather_main">
+
+            {% for key, value in forecast_7_day.items %}
+
+            <div class="daily_weather">
+                <span class="daily_day">{{ value.day|slice:"0:3"|upper }}</span>
+
+                
+                    <div class="weather-icons">
+                    <i class="daily_weather_icon">{% include value.svg %}</i>
+                    </div>
+                   
+                    <div class="day_descrip">
+                        <span class="day_description">{{ value.description }}</span>
+                    </div>
+
+               
+
+                <div class="day_temp">
+                    <span class="temp_text_max">{{ value.temp_max|floatformat:"0" }}°c</span>
+                    <br>
+                    <span class="temp_text_min">{{ value.temp_min|floatformat:"0" }}°c</span>
+                </div>
+            </div>
+
+
+            {% endfor %}
+    
+           
+
+        </div>
+
+
+          
+   
+
+
+    </div>
+</div>
+
+    
+</body>
+
+{% endblock content %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+
+<body class="profile-edit-body">
+    
+    <div class="container">
+
+        <div class="card-body edit-profile-card">
+
+        
+    
+                <div class="profile-edit-content">
+
+
+                    <form method="POST" enctype="multipart/form-data" id="login-form">
+                        {% csrf_token %}
+                        <h2 class="auth-form-title">Edit Profile</h2>
+
+                        <!-- Login Form errors displayed-->
+                        {% include 'users/snippets/form_errors.html' %}
+                      
+
+
+                        <div class="form-row row g-3">
+                            <div class="form-group col-md-6 mb-0">
+                                {{ form.first_name|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-6 mb-0">
+                                {{ form.last_name|as_crispy_field }}
+                            </div>
+
+                        </div class="form-group col-md-12 mb-0">
+                                {{ form.age|as_crispy_field }}
+                                {{ form.about|as_crispy_field }}
+
+                                <br>
+
+                                <div class="profile_pic_upload">
+                                    <h6>Profile Pic</h6>
+                                    <h7>current image:</h7>
+                                        <span class="image_url">{{ profile.profile_pic }}</span> <br> <br>
+                                </div>
+                                
+                                    {{ form.profile_pic|as_crispy_field }} 
+                                
+                        </div>  
+                        
+                    
+                        <input type="submit" name="submit" id="submit" class="form-submit" value="SAVE"/>
+             
+                    </form>
+
+                    
+                        <a href="{% url 'profile' user.slug user.id %}" class="btn btn-outline-dark btn-sm cancel-button">Cancel</a>
+                   
+
+                </div>
+            
+       
+  
+        </div>
+          
+    </div>
+
+</body>
+
+
+
+
+
+
+{% endblock content %}

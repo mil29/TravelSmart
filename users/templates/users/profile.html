@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<body class="profile-edit-body">
+
+
+<div class="container-fluid">
+
+    
+        <div class="card-body profile-card-body">
+                <div class"card">
+           
+                    <h3>{{request.user.username }}</h3>
+                    <div class="profile_pic_div">
+
+                        {% if profile.profile_pic == 'default_profile_pic/default.jpeg' %}
+                        <img src="{{ profile.profile_pic.url }}" class="img-thumbnail", style="width:200px;height:200px;">
+           
+                        {% else %}
+                         <img src="{{ profile.profile_pic.url }}" class="img-thumbnail", style="width:200px;height:200px;">
+                        <!--button to clear profile image and set back to default-->
+                        <a href="{% url 'delete_profile_image' slug=request.user.slug pk=request.user.id %}" class="trash_pic_button"><i class="bi bi-trash3"></i></a>
+                        {% endif %}
+                           
+                  
+                      
+                    </div>
+
+                </div>
+
+                <h5>Name: {{ profile.first_name }} {{ profile.last_name }}</h5> 
+                <h5>Age: {{ profile.age }}</h5> 
+                
+                <div class="card">
+                    <div class="about-card">
+                        <p>About: {{ profile.about }}</p> 
+                    </div>
+                </div>
+                
+                <br>
+
+  
+
+
+                <a href="{% url 'profile_edit' user.slug user.id %}"><b>Edit Profile</b></a>
+
+
+    
+        <div class="country-categories-container">
+
+            <h3 class="recent-title">Recent Saved Searches</h3>
+
+            {% for place in recent_places %}
+
+            <div class="recent-search-container">
+                <div class="recent-search-card">
+                    <a class="country-link" href="{% url 'travel:travel-country' place.location %}">
+                    <h4>{{place.location}}</h4>
+                    </a>
+                </div>
+             
+                <a class="search-item-delete delete-btn" href="{% url 'travel:place-location-delete' place_location=place.location %}"><i class="bi bi-trash3"></i></a>
+               
+       
+            </div>
+
+             
+
+            {% endfor %}
+    
+  
+
+        </div>
+
+
+
+
+
+           
+          
+ 
+
+        </div>
+   
+</div>
+
+
+
+</body>
+
+
+{% endblock content %}
