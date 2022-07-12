@@ -23,7 +23,6 @@ $(document).ready(function() {
         }, 2000);
 
 
-
     // function to confirm profile pic delete on profile page
     $(document).on('click', '.trash_pic_button', function(){
         return confirm('Are you sure you want to delete profile pic?');
