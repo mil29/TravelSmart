@@ -10,9 +10,8 @@ import users.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('travel.urls')),
+    path('', include('travel.urls', namespace='travel')),
     path('users/', include('users.urls')),
-    path('travel/', include('travel.urls', namespace='travel')),
     path('login/', users.views.MyLoginView.as_view(template_name='users/login.html', authentication_form=CustomAuthForm), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/login.html'), name='logout'),
 ]
