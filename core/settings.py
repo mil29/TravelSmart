@@ -29,11 +29,9 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
+
 ALLOWED_HOSTS = ["*", "3.10.53.250", "django-env.eba-vxhrdjt8.eu-west-2.elasticbeanstalk.com"]
-=======
-ALLOWED_HOSTS = ['*','3.10.53.250', 'django-env.eba-vxhrdjt8.eu-west-2.elasticbeanstalk.com']
->>>>>>> 018d7de (edit settings.py allowed hosts)
+
 
 
 # Auth_user_model and authentication_backends are needed for custom user model 
@@ -102,8 +100,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-<<<<<<< HEAD
+DATABASES = {D
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'travelsmart',
@@ -111,17 +108,7 @@ DATABASES = {
         'PASSWORD': env('POSTGRESQL_PASSWORD'),
         'HOST': '3.10.53.250', # set to localhost when testing on ec2 then public_ip
         'PORT': '5432',
-    }
-=======
-   'default': {
-       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'travelsmart',
-       'USER': env('POSTGRESQL_USER'),
-       'PASSWORD': env('POSTGRESQL_PASSWORD'),,
-       'HOST': 'localhost',
-       'PORT': '5432',
-      }
->>>>>>> 018d7de (edit settings.py allowed hosts)
+    })
 }
 
 
