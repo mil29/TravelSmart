@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 #     }
 # }
 
-DATABASES = {D
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'travelsmart',
@@ -108,7 +108,7 @@ DATABASES = {D
         'PASSWORD': env('POSTGRESQL_PASSWORD'),
         'HOST': '3.10.53.250', # set to localhost when testing on ec2 then public_ip
         'PORT': '5432',
-    })
+    }
 }
 
 
