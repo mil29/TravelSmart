@@ -1,4 +1,8 @@
 #!/bin/bash
-cd /var/app/current/
-source /var/app/venv/*/bin/activate
-python manage.py migrate --noinput
+
+source "$PYTHONPATH/activate" && {
+# log which migrations have already been applied
+python manage.py showmigrations;
+# migrate
+python manage.py migrate --noinput;
+}
