@@ -1,3 +1,3 @@
 #!/bin/bash
-source /var/app/venv/staging-LQM1lest/bin/activate
+source /var/app/venv/*/bin/activate
 python /var/app/current/manage.py migrate --noinput
