@@ -18,7 +18,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # load categories csv into pandas dataframe
 # pd.set_option('display.max_rows', None)
-df = pd.read_csv('travel/foursquare_categories.csv', index_col=False, sep='\s*[,>]\s*', engine='python', names=['id', 'main_category', 'sub1_category', 'sub2_category', 'sub3_category', 'sub4_category'])
+df = pd.read_csv('travel/foursquare_categories.csv', index_col=False, sep='\s*[,>]\s*', engine='python', names=['id', 'main_category', 'sub1_category', 'sub2_category', 'sub3_category'])
 
 
 
