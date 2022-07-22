@@ -106,7 +106,7 @@ DATABASES = {
         'NAME': 'travelsmart',
         'USER': env('POSTGRESQL_USER'),
         'PASSWORD': env('POSTGRESQL_PASSWORD'),
-        'HOST': '3.10.53.250', # set to localhost when testing on ec2 then public_ip
+        'HOST': 'ec2-3-10-53-250.eu-west-2.compute.amazonaws.com', # set to localhost when testing on ec2 then public_ip
         'PORT': '5432',
     }
 }
