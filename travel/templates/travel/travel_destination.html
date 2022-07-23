@@ -23,19 +23,19 @@
     </a>
 
     <a class="card-link" href="{% url 'travel:travel-weather' %}">
-    <div class="home-card travel_weather_card">
+    <div class="home-card travel_weather_card" style="background-image: url({% static 'img/weather.png' %})">
             <h2 class="home-card-link-title">Weather</h2>
     </div>
     </a>
 
     <a class="card-link" href="{% url 'travel:travel-currency' %}">
-    <div class="home-card travel_currency_card">
+    <div class="home-card travel_currency_card" style="background-image: url({% static 'img/currency.png' %})">
             <h2 class="home-card-link-title">Currency</h2>
     </div>
     </a>
 
     <a class="card-link" href="{% url 'travel:get-category' %}">
-    <div class="home-card travel_places_card">
+    <div class="home-card travel_places_card" style="background-image: url({% static 'img/places.png' %})">
             <h2 class="home-card-link-title">Places</h2>
     </div>
     </a>

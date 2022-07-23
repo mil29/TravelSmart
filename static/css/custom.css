@@ -79,7 +79,7 @@ html::-webkit-scrollbar {
 .home-container {
     width: 100%;
 }
-.travel_search_card {
+/* .travel_search_card {
     background: url("{% static 'img/travel.png' %}");
 }
 .travel_map_card {
@@ -93,7 +93,7 @@ html::-webkit-scrollbar {
 }
 .travel_places_card {
     background: url('../img/places.png');
-}
+} */
 
 .home-card {
     height: 200px;
@@ -148,7 +148,7 @@ html::-webkit-scrollbar {
 
 /* Register Form  ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .register-body {
-    background: url('../img/blur-waters-imgB&W.jpg') no-repeat center center fixed;
+    /* background: url('../img/blur-waters-imgB&W.jpg') no-repeat center center fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -242,7 +242,7 @@ padding: 50px 85px; }
 
   /* Login Form ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .login-body {
-    background: url('../img/resort-imgB&W.jpg') no-repeat center center fixed;
+    /* background: url('../img/resort-imgB&W.jpg') no-repeat center center fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
