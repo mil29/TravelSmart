@@ -80,7 +80,7 @@ html::-webkit-scrollbar {
     width: 100%;
 }
 .travel_search_card {
-    background: url('../img/travel.png');
+    background: url("{% static 'img/travel.png' %}");
 }
 .travel_map_card {
     background: url('../img/map.png');
