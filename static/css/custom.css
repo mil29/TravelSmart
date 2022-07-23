@@ -147,13 +147,12 @@ html::-webkit-scrollbar {
 
 
 /* Register Form  ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.register-body {
-    /* background: url('../img/blur-waters-imgB&W.jpg') no-repeat center center fixed; */
+/* .register-body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+} */
 .form-title {
     font-weight: 300;
     color: #dedede;
@@ -241,11 +240,11 @@ padding: 50px 85px; }
 
 
   /* Login Form ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
-.login-body {
+/* .login-body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-}
+} */
 #div_id_username label, #div_id_password label, #div_id_email label, #div_id_password1 label, #div_id_password2 label {
     color: hsl(0, 0%, 15%);
 }
