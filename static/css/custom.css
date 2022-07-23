@@ -83,7 +83,7 @@ html::-webkit-scrollbar {
     background: url("{% static 'img/travel.png' %}");
 }
 .travel_map_card {
-    background: url('../img/map.png');
+    background: url("{% static 'img/map.png' %}");
 }
 .travel_weather_card {
     background: url('../img/weather.png');
