@@ -42,6 +42,10 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     def get_object(self, **kwargs):
         return Profile.objects.get(profile_user=self.request.user)
     
+    def form_invalid(self, form_class):
+        messages.add_message(self.request, messages.ERROR, 'Erro check image is less than 2mb in size')
+        return reverse_lazy('profile', kwargs={'slug': self.request.user.slug, 'pk': self.request.user.id})
+        
     def get_success_url(self):
         messages.add_message(self.request, messages.SUCCESS, 'Profile Updated Successfully')
         return reverse_lazy('profile', kwargs={'slug': self.request.user.slug, 'pk': self.request.user.id})
