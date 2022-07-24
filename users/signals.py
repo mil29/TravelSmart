@@ -29,8 +29,8 @@ user_logged_in.connect(login_user)
 @receiver(post_delete, sender=Profile)
 def profile_image_delete(sender, instance, **kwargs):
     if instance.profie_pic:
-        if os.path.isfile(instance.profile_pic.path):
-            os.remove(instance.profile_pic.path)
+        if os.name == instance.profile_pic.name:
+            os.remove(instance.profile_pic.name)
 
 
 
