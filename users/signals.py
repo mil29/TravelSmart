@@ -29,8 +29,8 @@ user_logged_in.connect(login_user)
 @receiver(post_delete, sender=Profile)
 def profile_image_delete(sender, instance, **kwargs):
     if instance.profie_pic:
-        if os.path.isfile(instance.profile_pic.path):
-            os.remove(instance.profile_pic.path)
+        if os.path.isfile(instance.profile_pic):
+            os.remove(instance.profile_pic)
 
 
 
@@ -44,9 +44,9 @@ def profile_image_update(sender, instance, **kwargs):
         old_image = sender.objects.get(pk=instance.pk).profile_pic
         new_image = instance.profile_pic
         # check old image is not new image then overwrites if old iamge is default image then ignores
-        if not old_image == new_image and '/default_profile_pic/default.jpeg' not in old_image.path:
-            if os.path.isfile(old_image.path):
-                os.remove(old_image.path)
+        if not old_image == new_image and 'default_profile_pic/default.jpeg' not in old_image:
+            if os.path.isfile(old_image):
+                os.remove(old_image)
     else:
         return False
 
