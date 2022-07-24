@@ -45,7 +45,7 @@ def profile_image_update(sender, instance, **kwargs):
         new_image = instance.profile_pic
         # check old image is not new image then overwrites if old iamge is default image then ignores
         if not old_image == new_image and 'default_profile_pic/default.jpeg' not in old_image:
-            if os.name.isfile(old_image.name):
+            if os.name == old_image.name:
                 os.remove(old_image.name)
     else:
         return False
