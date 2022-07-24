@@ -166,6 +166,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+DEFAULT_FILE_STORAGE = 'core.media_storages.MediaStorage'
+
 
 if 'AWS_STORAGE_BUCKET_NAME' in os.environ:
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
