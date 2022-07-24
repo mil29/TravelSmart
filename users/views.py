@@ -41,14 +41,6 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     
     def get_object(self, **kwargs):
         return Profile.objects.get(profile_user=self.request.user)
-    
-    def clean(self):
-        cleaned_data = super().clean()
-        
-        if any(self.errors):
-            return self.errors
-        
-        image = cleaned_data['profile_pic']
         
     def get_success_url(self):
         messages.add_message(self.request, messages.SUCCESS, 'Profile Updated Successfully')

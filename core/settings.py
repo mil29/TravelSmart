@@ -32,6 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*", "3.10.53.250", "django-env.eba-vxhrdjt8.eu-west-2.elasticbeanstalk.com"]
 
+DATA_UPLOAD_MAX_MEMORY_SIZE = 2*1024*1024  # your size limit in bytes
+
 
 
 # Auth_user_model and authentication_backends are needed for custom user model 
