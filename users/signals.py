@@ -29,8 +29,9 @@ user_logged_in.connect(login_user)
 @receiver(post_delete, sender=Profile)
 def profile_image_delete(sender, instance, **kwargs):
     if instance.profie_pic:
-        if os.name == instance.profile_pic.name:
-            instance.delete()
+        instance.profile_pic.delete(save=False)  ## use for aws s3
+        # if os.path.isfile(instance.profile_pic.path): ## use this in development
+        #     os.remove(instance.profile_pic.path)
 
 
 
