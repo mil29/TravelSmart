@@ -440,6 +440,12 @@ padding: 50px 85px; }
 #div_id_profile_pic {
     width: 20%;
 }
+
+label[for="id_profile_pic"] {
+    color: #020024;
+    font-style: italic;
+    font-weight: 300;
+}
 .image_url {
     font-size: 15px;
     color: #be2d1d;

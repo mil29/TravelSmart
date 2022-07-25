@@ -59,7 +59,7 @@ class ProfileAddForm(forms.ModelForm):
     
     about       = forms.CharField(validators=[MaxLengthValidator(600, message="Please keep About section under 600 characters")], required=False, widget=forms.Textarea(attrs={'placeholder': 'Add a little something about yourself.....(max 600 characters)', 'style': 'width: 100%;'}))
     
-    profile_pic = forms.ImageField(validators=[file_size],widget=forms.FileInput(), label="")
+    profile_pic = forms.ImageField(validators=[file_size],widget=forms.FileInput(), label="(Max 2MB)")
     
     
     
