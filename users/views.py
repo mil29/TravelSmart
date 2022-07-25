@@ -41,6 +41,14 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     
     def get_object(self, **kwargs):
         return Profile.objects.get(profile_user=self.request.user)
+    
+    def is_valid(self):
+        valid = super().is_valid()
+        if not valid:
+            messages.add_message(self.request, messages.ERROR, 'File too large')
+            return reverse_lazy('profile', kwargs={'slug': self.request.user.slug, 'pk': self.request.user.id})
+        else:
+            return True
         
     def get_success_url(self):
         messages.add_message(self.request, messages.SUCCESS, 'Profile Updated Successfully')
