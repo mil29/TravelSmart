@@ -30,7 +30,7 @@ user_logged_in.connect(login_user)
 def profile_image_delete(sender, instance, **kwargs):
     if instance.profie_pic:
         if os.name == instance.profile_pic.name:
-            instance.profile_pic.delete()
+            instance.delete()
 
 
 
