@@ -79,12 +79,8 @@ html::-webkit-scrollbar {
 .home-container {
     width: 100%;
 }
-/* .travel_search_card {
-    background: url("{% static 'img/travel.png' %}");
-}
-.travel_map_card {
-    background: url("{% static 'img/map.png' %}");
-}
+/* 
+
 .travel_weather_card {
     background: url('../img/weather.png');
 }
