@@ -32,7 +32,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["https://travel-smarts.herokuapp.com/login/?next=/"]
+ALLOWED_HOSTS = ["https://travel-smarts.herokuapp.com"]
 
 
 
