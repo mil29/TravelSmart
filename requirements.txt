@@ -1,9 +1,11 @@
 asgiref==3.5.0
+backports.zoneinfo==0.2.1
 boto3==1.21.26
 botocore==1.24.46
 certifi==2021.10.8
 charset-normalizer==2.0.12
 coverage==6.3.2
+dj-database-url==0.5.0
 Django==4.0.4
 django-admin-interface==0.18.3
 django-admin-thumbnails==0.2.6
@@ -15,6 +17,7 @@ django-crispy-forms==1.14.0
 django-environ==0.9.0
 django-flat-responsive==2.0
 django-flat-theme==1.1.4
+django-on-heroku==1.1.2
 django-storages==1.12.3
 factory-boy==3.2.1
 Faker==13.7.0
@@ -35,3 +38,4 @@ s3transfer==0.5.0
 six==1.12.0
 sqlparse==0.4.2
 urllib3==1.26.10
+whitenoise==6.2.0
