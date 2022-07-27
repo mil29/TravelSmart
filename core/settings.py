@@ -16,7 +16,6 @@ import environ
 
 env = environ.Env()
 environ.Env.read_env()
-import django_on_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,7 +31,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['*', "https://travel-smarts.herokuapp.com/"]
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -183,5 +182,3 @@ WEATHER_API_KEY = env('WEATHER_API_KEY')
 
 FOURSQUARE_API_KEY = env('FOURSQUARE_API_KEY')
 
-
-django_on_heroku.settings(locals())
