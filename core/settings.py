@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['*']
@@ -199,9 +199,9 @@ MESSAGE_TAGS = {
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-GOOGLE_API_KEY = env('GOOGLE_API_KEY')
+GOOGLE_API_KEY = os.environ['GOOGLE_API_KEY']
 
-WEATHER_API_KEY = env('WEATHER_API_KEY')
+WEATHER_API_KEY = os.environ['WEATHER_API_KEY']
 
-FOURSQUARE_API_KEY = env('FOURSQUARE_API_KEY')
+FOURSQUARE_API_KEY = os.environ['FOURSQUARE_API_KEY']
 
