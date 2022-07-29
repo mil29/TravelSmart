@@ -27,7 +27,7 @@ http://travelsmart-env.eba-9sgzcbph.eu-west-2.elasticbeanstalk.com
 ## Technologies used
 
 <b>Frontend</b>: HTML5, CSS (Bootstrap4, Custom CSS, Custom JS), AJAX, JQuery <br>
-<b>Backend</b>: Django <br>
+<b>Backend Framework</b>: Django <br>
 <b>Storage</b>: AWS EC2 <br>
 <b>Databases</b>: SQLite3, PostgreSQL <br>
 <b>Backend APIS's</b>: Google Places, Foursquare Places, Openweather, Exchangerate <br>
