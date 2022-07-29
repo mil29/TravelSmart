@@ -31,7 +31,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['travelsmart-env.eba-9sgzcbph.eu-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['*','travelsmart-env.eba-9sgzcbph.eu-west-2.elasticbeanstalk.com']
 
 
 
@@ -162,7 +162,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
-if 'AWS_STORAGE_BUCKET_NAME' in os.environ:
+if 'AWS_STORAGE_BUCKET_NAME' in os.environ and DEBUG == False:
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     DEFAULT_FILE_STORAGE = 'core.media_storages.MediaStorage'
 
