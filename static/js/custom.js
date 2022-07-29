@@ -52,7 +52,7 @@ $(document).ready(function() {
         }
         var baseUrl = "/img/flags";
         var $state = $(
-            `<span><img src="https://travel-smart.s3.eu-west-2.amazonaws.com/img/flags/${state.element.value.slice(0,3).toLowerCase()}.png" id="img-flag" /> ${state.text}</span>`
+            `<span><img src="{% static '${baseUrl}/${state.element.value.slice(0,3).toLowerCase()}.png' %}" id="img-flag" /> ${state.text}</span>`
         );
         return $state;
     };
