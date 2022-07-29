@@ -51,9 +51,9 @@ $(document).ready(function() {
             return state.text;
         }
         var baseUrl = "/static/img/flags";
-        var $state = `$(
-            <span><img src="{% static '/img/flags/${state.element.value.slice(0,3).toLowerCase()} + .png' %}" id="img-flag" /> ${state.text} + </span>
-        )`;
+        var $state = $(
+            `<span><img src="{% static '/img/flags/${state.element.value.slice(0,3).toLowerCase()} + .png' %}" id="img-flag" /> ${state.text} + </span>`
+        );
         return $state;
     };
 
