@@ -28,8 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
+# DEBUG False == AWS & POSTGRES
+# DEBUG True == local static & sqlite3
+DEBUG = False
 
 ALLOWED_HOSTS = ['*','travelsmart-env.eba-9sgzcbph.eu-west-2.elasticbeanstalk.com']
 
