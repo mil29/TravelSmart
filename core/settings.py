@@ -99,25 +99,24 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-# if 'RDS_DB_NAME' in os.environ:
-DATABASES = {
-    'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'travelsmartdb',
-    'USER': 'traveladmin',
-    'PASSWORD': 'smart99213',
-    'HOST': '18.132.119.18',
-    'PORT': '5432',
+if 'RDS_DB_NAME' in os.environ:
+    DATABASES = {
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ['POSTGRES_DB_NAME'],
+        'USER': os.environ['POSTGRES_USERNAME'],
+        'PASSWORD': os.environ['POSTGRES_PASSWORD'],
+        'HOST': os.environ['POSTGRES_HOSTNAME'],
+        'PORT': os.environ['POSTGRES_PORT'],
+        }
     }
-}
-# else:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
