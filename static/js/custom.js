@@ -50,9 +50,9 @@ $(document).ready(function() {
         if (!state.id) {
             return state.text;
         }
-        var baseUrl = "/static/img/flags";
+        var baseUrl = "/img/flags";
         var $state = $(
-            '<span><img src="' + baseUrl + '/' + state.element.value.slice(0,3).toLowerCase() + '.png" id="img-flag" /> ' + state.text + '</span>'
+            '<span><img src="{% static ' + baseUrl + '/' + state.element.value.slice(0,3).toLowerCase() + '.png %}" id="img-flag" /> ' + state.text + '</span>'
         );
         return $state;
     };
