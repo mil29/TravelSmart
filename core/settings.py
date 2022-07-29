@@ -31,7 +31,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['http://travelsmart-env.eba-9sgzcbph.eu-west-2.elasticbeanstalk.com']
 
 
 
