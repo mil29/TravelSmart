@@ -85,7 +85,7 @@ $(document).ready(function() {
         // adding currency symbol next to currency amount input 
         currencySymbol.innerHTML = currency_sym;
         let countryFlag = document.getElementById('img-flag').src.slice(0, -7);
-        imgFlag.innerHTML = `<img src='${countryFlag}${selectCurrency.toLowerCase()}.png'>`;
+        imgFlag.innerHTML = `<img src='/static/img/${countryFlag}${selectCurrency.toLowerCase()}.png'>`;
     });
 
     $('.currency-selector2').select2({
@@ -95,7 +95,7 @@ $(document).ready(function() {
         // add currency three letter symbol above select dropdown
         currency2.innerHTML = selectCurrency2;
         let countryFlag2 = document.getElementById('img-flag').src.slice(0, -7);
-        imgFlag2.innerHTML = `<img src='${countryFlag2}${selectCurrency2.toLowerCase()}.png'>`;
+        imgFlag2.innerHTML = `<img src='/static/img/${countryFlag2}${selectCurrency2.toLowerCase()}.png'>`;
     });
     
 
