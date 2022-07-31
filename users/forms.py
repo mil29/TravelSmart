@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.forms.widgets import PasswordInput, TextInput
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxLengthValidator
+from django.contrib.auth.forms import PasswordResetForm
 
 
 
@@ -70,6 +71,11 @@ class ProfileAddForm(forms.ModelForm):
     
 
      
-
+class EmailValidationOnForgotPassword(PasswordResetForm):
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        if not CustomUser.objects.filter(email__iexact=email, is_active=True).exists():
+            raise forms.ValidationError("There is no user registered with the specified email address!")
+        return email
     
     

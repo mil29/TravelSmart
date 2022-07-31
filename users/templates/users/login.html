@@ -42,6 +42,10 @@
                     {% endif %}
 
                     </form>
+
+                    <a class="btn btn-secondary btn-block text-uppercase auth_buttons_signup_forgot"
+                    href="{% url 'password_reset' %}">Forgot Password?</a>
+                    <br>
                     <p class="loginhere">
                         Not registered ? <a href="{% url 'register' %}" class="loginhere-link">Create account</a>
                     </p>

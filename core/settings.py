@@ -31,7 +31,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # DEBUG False == AWS & POSTGRES
 # DEBUG True == local static & sqlite3
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*','travelsmart-env.eba-9sgzcbph.eu-west-2.elasticbeanstalk.com']
 
@@ -187,6 +187,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'login'
 LOGOUT_REDIRECT_URL = 'login'
+
+
+# Password reset email backend 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 
 
 # flash messages setup
