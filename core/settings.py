@@ -31,7 +31,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # DEBUG False == AWS & POSTGRES
 # DEBUG True == local static & sqlite3
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*','travelsmart-env.eba-9sgzcbph.eu-west-2.elasticbeanstalk.com']
 
