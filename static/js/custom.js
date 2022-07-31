@@ -52,7 +52,7 @@ $(document).ready(function() {
         }
         var baseUrl = "static/img/flags";
         var $state = $(
-            '<span><img src="' + '{% static' + '"\//img\//flags\//' + state.element.value.slice(0,3).toLowerCase() + '.png' + '"' + ' %}' + 'class="img-flag" /> ' + state.text + '</span>'
+            '<span><img src="' + '{% static' + '"/\/img/\/flags/\/' + state.element.value.slice(0,3).toLowerCase() + '.png' + '"' + ' %}' + 'class="img-flag" /> ' + state.text + '</span>'
         );
         return $state;
     };
