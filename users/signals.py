@@ -28,7 +28,7 @@ user_logged_in.connect(login_user)
 #  Delete old profile image of user from database
 @receiver(post_delete, sender=Profile)
 def profile_image_delete(sender, instance, **kwargs):
-    if instance.profie_pic:
+    if instance.profile_pic:
         instance.profile_pic.delete(save=False)  ## use for aws s3
         # if os.path.isfile(instance.profile_pic.path): ## use this in development
         #     os.remove(instance.profile_pic.path)
@@ -45,7 +45,7 @@ def profile_image_update(sender, instance, **kwargs):
         old_image = sender.objects.get(pk=instance.pk).profile_pic
         new_image = instance.profile_pic
         # check old image is not new image then overwrites if old iamge is default image then ignores
-        if not old_image == new_image and 'default_profile_pic/default.jpeg' not in old_image:
+        if not old_image.name == new_image.name and 'default_profile_pic/default.jpeg' not in old_image.name:
             if os.name == old_image.name:
                 os.remove(old_image.name)
     else:
