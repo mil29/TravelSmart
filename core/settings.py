@@ -108,7 +108,7 @@ if DEBUG == False:
         'NAME': os.environ['POSTGRES_DB_NAME'],
         'USER': os.environ['POSTGRES_USERNAME'],
         'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-        'HOST': '18.132.119.18',
+        'HOST': '52.56.242.140',
         'PORT': '5432',
         }
     }
