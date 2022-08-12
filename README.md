@@ -1,6 +1,6 @@
 # Travel-Smart
 
-Travel info application built on Django.
+Travel info application built with Python using Django Framework.
 
 Features:
 
