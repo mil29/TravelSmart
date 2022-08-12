@@ -50,7 +50,7 @@ $(document).ready(function() {
         if (!state.id) {
             return state.text;
         }
-        var baseUrl = "/static/img/flags";
+        var baseUrl = "https://travel-smart.s3.eu-west-2.amazonaws.com/img/flags/";
         var $state = $(
             '<span><img src="' + baseUrl + '/' + state.element.value.slice(0,3).toLowerCase() + '.png" id="img-flag" /> ' + state.text + '</span>'
         );
