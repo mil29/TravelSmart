@@ -1,4 +1,4 @@
-# Travel-Smart
+# Travel-Smart (Python/Django Application)
 
 Travel info application built with Python using Django Framework.
 
